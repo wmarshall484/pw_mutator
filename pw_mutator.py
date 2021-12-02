@@ -82,7 +82,7 @@ def do_the_thing():
     r = None
     for idx, pw in enumerate(all_pwds):
         print(f'Trying {idx}: {pw}')
-        r = requests.post('https://webdiplomacy.net/index.php', data=dict(loginuser='kumo',loginpass=pw))
+        r = requests.post('https://site.com', data=dict(loginuser='user',loginpass=pw))
         r.raise_for_status()
         time.sleep(0.1)
         if r.content.decode('utf-8').find('The password you entered is incorrect.') == -1:
